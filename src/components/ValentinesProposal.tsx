@@ -65,10 +65,10 @@ export default function ValentinesProposal() {
 
   useEffect(() => {
     if (step < 2) {
-      // Change step after 5 seconds
+      // Change step after 6 seconds
       const timer = setTimeout(() => {
         setStep((prevStep) => prevStep + 1);
-      }, 5000);
+      }, 6000);
 
       return () => clearTimeout(timer);
     }
@@ -91,19 +91,19 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Congratulations! You have completed the game.
+            Finally! I almost fell asleep...
           </motion.h2>
         )}
         {step === 1 && (
           <motion.h2
             key="step-1"
             className={`text-4xl font-semibold mb-4 ${playfairDisplay.className}`}
-            transition={{ duration: 3 }}
+            transition={{ duration: 2 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: .6 }}
           >
-            I have a surprise for you!
+            Roses are red, fruity pebbles taste better after breakfast ...
           </motion.h2>
         )}
         {step === 2 && (
@@ -132,10 +132,10 @@ export default function ValentinesProposal() {
             <h2
               className={`text-5xl font-semibold mb-8 ${playfairDisplay.className}`}
             >
-              Will you be my Valentine?
+              Be my Valentine and let&apos;s find out?
             </h2>
             <Image
-              src="/sad_hamster.png"
+              src="/sad_hamster.jpg"
               alt="Sad Hamster"
               width={200}
               height={200}
@@ -145,7 +145,7 @@ export default function ValentinesProposal() {
                 className="px-6 py-2 text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl hover:from-pink-600 hover:to-rose-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 onClick={handleYesClick}
               >
-                Yes, I will! 🥰
+                Yes, I will
               </button>
               <button
                 className="px-6 py-2 text-lg font-semibold text-white bg-gradient-to-r from-gray-500 to-gray-600 rounded-xl hover:from-gray-600 hover:to-gray-700 transform hover:scale-95 transition-all duration-300 shadow-lg"
@@ -161,7 +161,7 @@ export default function ValentinesProposal() {
                 onMouseEnter={() => setPosition(getRandomPosition())}
                 onClick={() => setPosition(getRandomPosition())}
               >
-                No, I won&apos;t 😢
+                No, I won&apos;t 🥲
               </button>
             </div>
           </motion.div>
@@ -175,15 +175,8 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Thank you for accepting, I love you! 💕
-            <p className="text-sm mt-4">For more information, write me!!! 💌</p>
-            <Image
-              src="/hamster_jumping.gif"
-              alt="Hamster Feliz"
-              width={200}
-              height={200}
-              unoptimized
-            />
+            Sunset over drinks - Ripple & Roots, 5:45pm
+            <p className="text-sm mt-4">See you there.</p>
           </motion.div>
         )}
       </AnimatePresence>
