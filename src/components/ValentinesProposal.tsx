@@ -175,8 +175,8 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Sunset over drinks - Ripple & Roots, 5:45pm
-            <p className="text-sm mt-4">See you there.</p>
+            Sunset over drinks - Ripple & Roots
+            <p className="text-sm mt-4"></p>
           </motion.div>
         )}
       </AnimatePresence>
